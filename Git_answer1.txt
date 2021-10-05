@@ -1,0 +1,6 @@
+What is the difference between 'git pull' and 'git fetch'? - 
+
+Git fetch is the command that tells your local git to retrieve the latest meta-data
+info from the original (yet doesn’t do any file transferring) 
+while git pull on the other hand does that ans brings (copy) those changes 
+from the remote repository.
