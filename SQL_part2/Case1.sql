@@ -15,10 +15,10 @@ SELECT p.product_id,
            ELSE
                'Good'
        END AS Product_category
-FROM [sales].[orders] o
-RIGHT JOIN [sales].[order_items] oi
+FROM sales.orders o
+FULL OUTER JOIN sales.order_items oi
         ON o.order_id = oi.order_id
-    RIGHT JOIN [production].[products] p
+    FULL OUTER JOIN production.products p
         ON p.product_id = oi.product_id
 WHERE (product_name LIKE '%Surly%' AND product_name LIKE '%_2018%')
 GROUP BY p.product_id,
